@@ -1,4 +1,4 @@
-# Just a simple test to demonstrate the custom row-column transposition method included in our algorithm.
+# Just a simple test to demonstrate the custom row-column transposition method included in the algorithm.
 
 
 def convert_to_matrix(input_string, code):

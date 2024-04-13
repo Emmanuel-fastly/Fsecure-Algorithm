@@ -745,11 +745,19 @@ class FSecure_encryption:
         return matrix_to_text(self.plaintext)
 
 
-key = 0x4C6F636B656420757020627920416B6F
-plaintext = 0x48656C6C6F20756E646572776F726C64
-aes = FSecure_encryption(key)
-ciphertext = aes.encrypt_block(plaintext)
-print(hex(ciphertext))
-decrypted = aes.decrypt_block(ciphertext)
-print(hex(decrypted))
-print(decrypted == plaintext)
+def encrypt(plaintext, key):
+    """Encrypt a plaintext using the F-Secure encryption algorithm."""
+    # Initialize the FSecure_encryption object with the master key
+    fsecure = FSecure_encryption(key)
+    # Encrypt the plaintext
+    ciphertext = fsecure.encrypt_block(plaintext)
+    return ciphertext
+
+
+def decrypt(ciphertext, key):
+    """Decrypt a ciphertext using the F-Secure encryption algorithm."""
+    # Initialize the FSecure_encryption object with the master key
+    fsecure = FSecure_encryption(key)
+    # Decrypt the ciphertext
+    plaintext = fsecure.decrypt_block(ciphertext)
+    return plaintext

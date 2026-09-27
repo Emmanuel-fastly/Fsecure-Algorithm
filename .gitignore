@@ -1,1 +1,17 @@
 Test/
+
+# Local assistant notes
+CLAUDE.md
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+build/
+dist/
+.pytest_cache/
+
+# Encrypted output from CLI experiments
+*.fsc
